@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  gap: 20px;
+  background-color: #d0cde6;
+}
+
+.avatar {
+  border-radius: 100%;
+  padding: 10px;
+  img {
+    display: block;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 100px;
+  }
+}
+
+.description {
+  max-width: 580px;
+  padding: 10px 15px;
+}
