@@ -20,3 +20,28 @@
   max-width: 580px;
   padding: 10px 15px;
 }
+
+.info {
+  background-color: #cbd4c1;
+  padding: 10px 15px;
+  max-width: 500px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  span {
+    color: #797979;
+  }
+}
+.posts {
+  h2 {
+    margin: 0 auto;
+    width: 100px;
+    margin-bottom: 12px;
+  }
+}
+.post {
+  background-color: #eeeed8;
+  padding: 10px 20px;
+  max-width: 720px;
+  margin-bottom: 25px;
+  border-radius: 14px;
+}

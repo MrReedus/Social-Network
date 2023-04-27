@@ -5,11 +5,18 @@ import "./scss/app.scss";
 
 const App = () => {
   return (
-    <div className="app-wrapper">
+    <>
       <Header />
-      <Navbar />
-      <Profile />
-    </div>
+      <div className="app-wrapper">
+        <Header />
+        <Header />
+        <Header />
+        <Navbar />
+        <Profile />
+        <Header />
+      </div>
+      <Header />
+    </>
   );
 };
 

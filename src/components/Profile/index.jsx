@@ -17,6 +17,32 @@ const Profile = () => {
           <p className={styles.description}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quasi accusamus voluptatem sunt corporis
           </p>
+          <div className={styles.info}>
+            <p>
+              Date of birth: <span>02.01.1996</span>
+            </p>
+            <p>
+              City <span>Kemerovo</span>
+            </p>
+            <p>
+              {" "}
+              Education <span>TGASU</span>
+            </p>
+          </div>
+          <div className={styles.posts}>
+            <h2>Posts</h2>
+            <div className={styles.post}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nostrum vero, repellendus possimus
+              molestias quibusdam assumenda culpa adipisci molestiae expedita inventore tempora nemo eos odio aut odit
+              magnam hic eius.
+            </div>
+            <div className={styles.post}>
+              {" "}
+              Color sit amet consectetur adipisicing elit. Quisquam nostrum vero, repellendus possimus molestias
+              quibusdam assumenda culpa adipisci molestiae expedita inventore tempora nemo eos odio aut odit magnam hic
+              eius.{" "}
+            </div>
+          </div>
         </div>
       </div>
     </div>
