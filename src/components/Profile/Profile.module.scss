@@ -2,6 +2,7 @@
   display: flex;
   gap: 20px;
   background-color: #d0cde6;
+  margin-bottom: 25px;
 }
 
 .avatar {
@@ -30,18 +31,4 @@
   span {
     color: #797979;
   }
-}
-.posts {
-  h2 {
-    margin: 0 auto;
-    width: 100px;
-    margin-bottom: 12px;
-  }
-}
-.post {
-  background-color: #eeeed8;
-  padding: 10px 20px;
-  max-width: 720px;
-  margin-bottom: 25px;
-  border-radius: 14px;
 }

@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 ul {
   list-style: none;
@@ -21,24 +22,6 @@ ul {
   grid-template-areas:
     "h h"
     "n c";
-}
-
-.header {
-  background-color: #e5e7db;
-  grid-area: h;
-  padding: 10px;
-
-  .logo {
-    width: 80px;
-    img {
-      width: 60px;
-      height: 60px;
-    }
-  }
-}
-
-.nav {
-  grid-area: n;
 }
 
 .content {
