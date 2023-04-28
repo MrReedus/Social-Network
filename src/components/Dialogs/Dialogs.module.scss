@@ -1,9 +1,22 @@
-const Dialogs = () => {
-  return (
-  <div>
+.dialogs {
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+  gap: 5px;
+}
+.messages,
+.items {
+  padding: 12px;
+}
 
+.message,
+.item {
+  padding: 10px;
+  border: 1px solid rgb(112, 112, 112);
+  margin-bottom: 10px;
+  border-radius: 8px;
 
-Dialogs
-
-  </div>
-  )
+  a {
+    color: rgb(80, 79, 79);
+    text-decoration: none;
+  }
+}
