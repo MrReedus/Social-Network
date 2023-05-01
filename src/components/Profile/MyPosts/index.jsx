@@ -1,9 +1,11 @@
 import React from "react";
 import styles from "./MyPosts.module.scss";
 import Post from "./Post";
-import { posts } from "../../../index";
 
-const MyPosts = () => {
+const MyPosts = ({ posts }) => {
+  let postElements = posts.map((post) => {
+    return <Post key={post.id} text={post.text} imageUrl={post.url} />;
+  });
   return (
     <div className={styles.posts}>
       <div className={styles.container}>
@@ -13,10 +15,7 @@ const MyPosts = () => {
       </div>
 
       <h2>Posts</h2>
-
-      {posts.map((post) => {
-        return <Post key={post.id} text={post.text} imageUrl={post.url} />;
-      })}
+      {postElements}
     </div>
   );
 };

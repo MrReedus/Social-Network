@@ -1,22 +1,42 @@
 .dialogs {
   display: grid;
   grid-template-columns: 2fr 10fr;
+  justify-content: center;
+  align-content: center;
   gap: 5px;
 }
 .messages,
 .items {
   padding: 12px;
+  display: grid;
 }
 
 .message,
 .item {
   padding: 10px;
-  border: 1px solid rgb(112, 112, 112);
+  border: 1px solid rgb(188, 190, 194);
   margin-bottom: 10px;
   border-radius: 8px;
+}
+.message {
+  padding-left: 30px;
+}
 
-  a {
-    color: rgb(80, 79, 79);
-    text-decoration: none;
+a {
+  color: rgb(80, 79, 79);
+  text-decoration: none;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+.avatar {
+  img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 100%;
   }
+  margin-right: 20px;
 }

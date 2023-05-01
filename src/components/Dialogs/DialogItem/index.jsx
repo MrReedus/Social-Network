@@ -1,11 +1,16 @@
 import styles from "./../Dialogs.module.scss";
 import { NavLink } from "react-router-dom";
 
-const DialogItem = ({ name, id }) => {
+const DialogItem = ({ name, id, avatarUrl }) => {
   let path = `/dialogs/${id}`;
   return (
     <div className={styles.item}>
-      <NavLink to={path}>{name}</NavLink>
+      <div className={styles.wrapper}>
+        <div className={styles.avatar}>
+          <img src={avatarUrl} alt="" />
+        </div>
+        <NavLink to={path}>{name}</NavLink>
+      </div>
     </div>
   );
 };

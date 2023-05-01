@@ -8,7 +8,7 @@ import Profile from "./components/Profile";
 
 import "./scss/app.scss";
 
-const App = () => {
+const App = ({ state }) => {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
@@ -16,8 +16,8 @@ const App = () => {
         <Navbar />
         <div className="content">
           <Routes>
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/dialogs/*" element={<Dialogs />} />
+            <Route path="/profile" element={<Profile ProfileData={state.profilePage} />} />
+            <Route path="/dialogs/*" element={<Dialogs messagesData={state.messagesPage} />} />
           </Routes>
         </div>
       </div>
