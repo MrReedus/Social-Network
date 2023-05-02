@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Profile.module.scss";
 import MyPosts from "./MyPosts";
-const Profile = ({ ProfileData }) => {
+const Profile = ({ ProfileData, addPost }) => {
   return (
     <>
       <img src="https://wallpapers.com/images/hd/city-basketball-court-street-gkz98iv9ljs2nwv8.jpg" alt="" />
@@ -33,7 +33,7 @@ const Profile = ({ ProfileData }) => {
         </div>
       </div>
 
-      <MyPosts posts={ProfileData.posts} />
+      <MyPosts posts={ProfileData.posts} addPost={addPost} />
     </>
   );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import Dialogs from "./components/Dialogs";
 import Header from "./components/Header";
@@ -8,20 +8,19 @@ import Profile from "./components/Profile";
 
 import "./scss/app.scss";
 
-const App = ({ state }) => {
+const App = ({ state, addPost }) => {
+  console.log(addPost);
   return (
-    <BrowserRouter>
-      <div className="app-wrapper">
-        <Header />
-        <Navbar />
-        <div className="content">
-          <Routes>
-            <Route path="/profile" element={<Profile ProfileData={state.profilePage} />} />
-            <Route path="/dialogs/*" element={<Dialogs messagesData={state.messagesPage} />} />
-          </Routes>
-        </div>
+    <div className="app-wrapper">
+      <Header />
+      <Navbar />
+      <div className="content">
+        <Routes>
+          <Route path="/profile" element={<Profile ProfileData={state.profilePage} addPost={addPost} />} />
+          <Route path="/dialogs/*" element={<Dialogs messagesData={state.messagesPage} />} />
+        </Routes>
       </div>
-    </BrowserRouter>
+    </div>
   );
 };
 

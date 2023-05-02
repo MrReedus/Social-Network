@@ -1,16 +1,22 @@
+import { renderEntireThree } from "../render";
 let state = {
   profilePage: {
     posts: [
       {
         id: 1,
         text: "Hello world",
-        url: "https://heaclub.ru/tim/9ead4b466d81ed663ff30ea0414a4426/kartinka-na-avu-dlya-parnei-prikolnaya.jpg",
+        likeCount: 7,
       },
-      { id: 2, text: "YES!!!", url: "https://mobimg.b-cdn.net/v3/fetch/f5/f54a3aa85c95c03fa6fb8cf83e531f6e.jpeg" },
+      {
+        id: 2,
+        text: "YES!!!",
+        likeCount: 10,
+      },
+
       {
         id: 3,
         text: "React is AMAIZING",
-        url: "https://pixelbox.ru/wp-content/uploads/2022/08/avatars-viber-pixelbox.ru-33.jpg",
+        likeCount: 42,
       },
     ],
   },
@@ -62,6 +68,16 @@ let state = {
       { id: 7, text: "get your Card, please" },
     ],
   },
+};
+
+export let addPost = (postMessage) => {
+  let newPost = {
+    id: 5,
+    text: postMessage,
+    likecount: 0,
+  };
+  state.profilePage.posts.push(newPost);
+  renderEntireThree(state);
 };
 
 export default state;
