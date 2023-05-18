@@ -8,15 +8,19 @@ import Profile from "./components/Profile";
 
 import "./scss/app.scss";
 
-const App = ({ state, addPost }) => {
-  console.log(addPost);
+const App = ({ state, addPost, updateNewPostText }) => {
   return (
     <div className="app-wrapper">
       <Header />
       <Navbar />
       <div className="content">
         <Routes>
-          <Route path="/profile" element={<Profile ProfileData={state.profilePage} addPost={addPost} />} />
+          <Route
+            path="/profile"
+            element={
+              <Profile ProfileData={state.profilePage} addPost={addPost} updateNewPostText={updateNewPostText} />
+            }
+          />
           <Route path="/dialogs/*" element={<Dialogs messagesData={state.messagesPage} />} />
         </Routes>
       </div>
