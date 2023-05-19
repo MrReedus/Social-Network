@@ -1,8 +1,9 @@
 import React from "react";
 import styles from "./MyPosts.module.scss";
 import Post from "./Post";
+import { addPostACtionCreator, onChangePostActionCreator } from "../../../Redux/state";
 
-const MyPosts = ({ posts, addPost, newPostText, updateNewPostText }) => {
+const MyPosts = ({ posts, newPostText, dispatch }) => {
   let postElements = posts.map((post) => {
     return <Post key={post.id} text={post.text} likeCount={post.likeCount} />;
   });
@@ -10,14 +11,13 @@ const MyPosts = ({ posts, addPost, newPostText, updateNewPostText }) => {
   let newPostElement = React.createRef(); //* создали ссылку, ссылаемся на textarea обозначив её там.
 
   const addNewPost = () => {
-    addPost()
-    // let textPost = newPostElement.current.value; //* получаем значение текушего textarea.
-    // addPost(textPost);
+    dispatch(addPostACtionCreator());
   };
 
   const onChangePost = () => {
     let text = newPostElement.current.value;
-    updateNewPostText(text);
+    let action = onChangePostActionCreator(text);
+    dispatch(action);
   };
   return (
     <div className={styles.posts}>
