@@ -31,6 +31,7 @@ a {
   display: flex;
   align-items: center;
 }
+
 .avatar {
   img {
     width: 40px;
@@ -39,4 +40,8 @@ a {
     border-radius: 100%;
   }
   margin-right: 20px;
+}
+
+.textAreaWrapper {
+  display: flex;
 }
