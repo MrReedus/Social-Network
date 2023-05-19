@@ -30,11 +30,11 @@ const MyPosts = ({ posts, newPostText, dispatch }) => {
           rows="5"
           value={newPostText}
         />
-        <button className={styles.button} onClick={addNewPost}>
+        <button className="button" onClick={addNewPost}>
           add post
         </button>
         <button
-          className={styles.button}
+          className="button"
           onClick={() => {
             alert("remove");
           }}
