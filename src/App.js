@@ -8,19 +8,14 @@ import Profile from "./components/Profile";
 
 import "./scss/app.scss";
 
-const App = ({ state, addPost, updateNewPostText }) => {
+const App = ({ state, dispatch }) => {
   return (
     <div className="app-wrapper">
       <Header />
       <Navbar />
       <div className="content">
         <Routes>
-          <Route
-            path="/profile"
-            element={
-              <Profile ProfileData={state.profilePage} addPost={addPost} updateNewPostText={updateNewPostText} />
-            }
-          />
+          <Route path="/profile" element={<Profile ProfileData={state.profilePage} dispatch={dispatch} />} />
           <Route path="/dialogs/*" element={<Dialogs messagesData={state.messagesPage} />} />
         </Routes>
       </div>
