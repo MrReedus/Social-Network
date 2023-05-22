@@ -7,8 +7,9 @@ import Navbar from "./components/Navbar";
 import Profile from "./components/Profile";
 
 import "./scss/app.scss";
+// import store from "./Redux/state";
 
-const App = ({ state, dispatch }) => {
+const App = ({ state, dispatch, store }) => {
   return (
     <div className="app-wrapper">
       <Header />
@@ -16,7 +17,7 @@ const App = ({ state, dispatch }) => {
       <div className="content">
         <Routes>
           <Route path="/profile" element={<Profile ProfileData={state.profilePage} dispatch={dispatch} />} />
-          <Route path="/dialogs/*" element={<Dialogs messagesData={state.messagesPage} />} />
+          <Route path="/dialogs/*" element={<Dialogs messagesData={state.messagesPage} store={store} />} />
         </Routes>
       </div>
     </div>
